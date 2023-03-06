@@ -11,12 +11,13 @@ import org.iesalandalus.programacion.alquilervehiculos.modelo.dominio.Cliente;
 import org.iesalandalus.programacion.alquilervehiculos.modelo.dominio.Turismo;
 import org.iesalandalus.programacion.alquilervehiculos.modelo.negocio.Alquileres;
 import org.iesalandalus.programacion.alquilervehiculos.modelo.negocio.Clientes;
+import org.iesalandalus.programacion.alquilervehiculos.modelo.negocio.IClientes;
 import org.iesalandalus.programacion.alquilervehiculos.modelo.negocio.Turismos;
 
 
 public class Modelo {
 	
-	Clientes clientes;
+	IClientes clientes;
 	Turismos turismos;
 	Alquileres alquileres;
 	
