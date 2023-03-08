@@ -8,7 +8,7 @@ import javax.naming.OperationNotSupportedException;
 
 import org.iesalandalus.programacion.alquilervehiculos.modelo.dominio.Alquiler;
 import org.iesalandalus.programacion.alquilervehiculos.modelo.dominio.Cliente;
-import org.iesalandalus.programacion.alquilervehiculos.modelo.dominio.Turismo;
+import org.iesalandalus.programacion.alquilervehiculos.modelo.dominio.Vehiculo;
 
 public class Alquileres {
 	private List<Alquiler> coleccionAlquileres;
@@ -31,7 +31,7 @@ public class Alquileres {
 		return alquileresCliente;
 	}
 	
-	public List<Alquiler> get(Turismo turismo){
+	public List<Alquiler> get(Vehiculo turismo){
 		List<Alquiler>alquileresTurismo = new ArrayList<>();
 		for(Alquiler alquiler : coleccionAlquileres) {
 			if(alquiler.getTurismo().equals(turismo)){
@@ -45,7 +45,7 @@ public class Alquileres {
 		return coleccionAlquileres.size();
 	}
 	
-	private void comprobarAlquiler(Cliente cliente, Turismo turismo, LocalDate fechaAlquiler) throws OperationNotSupportedException {
+	private void comprobarAlquiler(Cliente cliente, Vehiculo turismo, LocalDate fechaAlquiler) throws OperationNotSupportedException {
 		    // Compruebo que existe algún alquiler sin devolver para el cliente o el turismo
 		    for (Alquiler alquiler : coleccionAlquileres) {
 		      if(alquiler.getFechaDevolucion() == null) {

@@ -6,6 +6,7 @@ import java.util.List;
 import javax.naming.OperationNotSupportedException;
 
 import org.iesalandalus.programacion.alquilervehiculos.modelo.dominio.Turismo;
+import org.iesalandalus.programacion.alquilervehiculos.modelo.dominio.Vehiculo;
 
 public class Turismos {
 	private List<Turismo> coleccionTurismos;
@@ -33,7 +34,7 @@ public class Turismos {
 		coleccionTurismos.add(turismo);
 	}
 
-	public Turismo buscar(Turismo turismo) {
+	public Turismo buscar(Vehiculo turismo) {
 		if (turismo == null) {
 			throw new NullPointerException("ERROR: No se puede buscar un turismo nulo.");
 		}
@@ -43,7 +44,7 @@ public class Turismos {
 		return indice == -1 ? null : coleccionTurismos.get(indice);
 	}
 
-	public void borrar(Turismo turismo) throws OperationNotSupportedException {
+	public void borrar(Vehiculo turismo) throws OperationNotSupportedException {
 		if (turismo == null) {
 			throw new NullPointerException("ERROR: No se puede borrar un turismo nulo.");
 		}

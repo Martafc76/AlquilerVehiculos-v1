@@ -9,6 +9,7 @@ import javax.naming.OperationNotSupportedException;
 import org.iesalandalus.programacion.alquilervehiculos.modelo.dominio.Alquiler;
 import org.iesalandalus.programacion.alquilervehiculos.modelo.dominio.Cliente;
 import org.iesalandalus.programacion.alquilervehiculos.modelo.dominio.Turismo;
+import org.iesalandalus.programacion.alquilervehiculos.modelo.dominio.Vehiculo;
 import org.iesalandalus.programacion.alquilervehiculos.modelo.negocio.Alquileres;
 import org.iesalandalus.programacion.alquilervehiculos.modelo.negocio.Clientes;
 import org.iesalandalus.programacion.alquilervehiculos.modelo.negocio.IClientes;
@@ -68,7 +69,7 @@ public class Modelo {
 	  return new Cliente(clientes.buscar(cliente));
 	}
 
-	public Turismo buscar(Turismo turismo) {
+	public Vehiculo buscar(Vehiculo turismo) {
 	    return new Turismo(turismos.buscar(turismo));
 	}
 
@@ -100,7 +101,7 @@ public class Modelo {
 		clientes.borrar(cliente);
 	}
 	
-	public void borrar(Turismo turismo) throws OperationNotSupportedException {
+	public void borrar(Vehiculo turismo) throws OperationNotSupportedException {
 		for(Alquiler alquiler : alquileres.get(turismo)) {
 			alquileres.borrar(alquiler);
 		}
@@ -145,7 +146,7 @@ public class Modelo {
 		return alquileresADevolver;
 	}
 	
-	public List<Alquiler> getAlquileres(Turismo turismo){
+	public List<Alquiler> getAlquileres(Vehiculo turismo){
 		List<Alquiler> alquileresADevolver = new ArrayList<>();
 		for(Alquiler alquiler : alquileres.get(turismo)) {
 			alquileresADevolver.add(new Alquiler(alquiler));

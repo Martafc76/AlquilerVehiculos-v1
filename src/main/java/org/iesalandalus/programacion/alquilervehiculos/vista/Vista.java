@@ -5,7 +5,7 @@ import javax.naming.OperationNotSupportedException;
 import org.iesalandalus.programacion.alquilervehiculos.controlador.Controlador;
 import org.iesalandalus.programacion.alquilervehiculos.modelo.dominio.Alquiler;
 import org.iesalandalus.programacion.alquilervehiculos.modelo.dominio.Cliente;
-import org.iesalandalus.programacion.alquilervehiculos.modelo.dominio.Turismo;
+import org.iesalandalus.programacion.alquilervehiculos.modelo.dominio.Vehiculo;
 import org.iesalandalus.programacion.alquilervehiculos.modelo.negocio.Alquileres;
 import org.iesalandalus.programacion.alquilervehiculos.modelo.negocio.Clientes;
 
@@ -194,7 +194,7 @@ public class Vista {
 
 	private void buscarTurismo() {
 		Consola.mostrarCabecera("Buscar turismo");
-		Turismo turismo = null;
+		Vehiculo turismo = null;
 		try {
 			turismo = controlador.buscar(Consola.leerTurismoMatricula());
 		} catch (Exception e) {
@@ -280,7 +280,7 @@ public class Vista {
 
 	private void listarTurismos() {
 		Consola.mostrarCabecera("Lista de turismos");
-		for (Turismo turismo : controlador.getTurismos()) {
+		for (Vehiculo turismo : controlador.getTurismos()) {
 			System.out.println(turismo);
 		}
 	}
@@ -302,7 +302,7 @@ public class Vista {
 	}
 
 	private void listarAlquileresTurismo() {
-		Turismo turismo = Consola.leerTurismoMatricula();
+		Vehiculo turismo = Consola.leerTurismoMatricula();
 		Consola.mostrarCabecera("Lista de alquileres del turismo");
 		try {
 			for (Alquiler alquileres : controlador.getAlquileres(turismo)) {
