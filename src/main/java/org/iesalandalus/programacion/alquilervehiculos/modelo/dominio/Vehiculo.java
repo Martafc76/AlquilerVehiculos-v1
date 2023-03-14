@@ -27,7 +27,7 @@ public abstract class Vehiculo {
 
 	protected Vehiculo(Vehiculo vehiculo) {
 		if(vehiculo == null) {
-			throw new NullPointerException("ERROR: El vehiculo no puede ser nulo");
+			throw new NullPointerException("ERROR: No es posible copiar un vehículo nulo.");
 		}
 		marca = vehiculo.getMarca();
 		modelo = vehiculo.getModelo();
@@ -50,7 +50,7 @@ public abstract class Vehiculo {
 		if(vehiculo instanceof Autobus autobus ) {
 			vehiculoCopia = new Autobus(autobus);
 		}
-		
+	
 		return vehiculoCopia;
 	}
 	
@@ -115,3 +115,5 @@ public abstract class Vehiculo {
 	}
 
 }
+
+//restringir decimales a dos

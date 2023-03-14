@@ -23,7 +23,7 @@ public class Autobus extends Vehiculo {
 
 	private void setPlazas(int plazas) {
 		if (plazas <= 6 | plazas > 100) {
-			throw new IllegalArgumentException("ERROR: El número de plazas no es válido.");
+			throw new IllegalArgumentException("ERROR: Las plazas no son correctas.");
 		}
 		this.plazas = plazas;
 
@@ -36,7 +36,7 @@ public class Autobus extends Vehiculo {
 	
 	@Override
 	public String toString() {
-		return String.format("%s %s %s - %s", getMarca(), getModelo(), plazas, getMatricula());
+		return String.format("%s %s (%s plazas) - %s", getMarca(), getModelo(), plazas, getMatricula());
 	}
 
 }

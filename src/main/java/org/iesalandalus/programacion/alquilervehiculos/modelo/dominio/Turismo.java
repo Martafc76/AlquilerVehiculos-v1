@@ -35,7 +35,7 @@ public class Turismo extends Vehiculo {
 	
 	@Override
 	public String toString() {
-		return String.format("%s %s (%sCC) - %s", getMarca(), getModelo(), cilindrada, getMatricula());
+		return String.format("%s %s (%s cc) - %s", getMarca(), getModelo(), cilindrada, getMatricula());
 	}
 	
 

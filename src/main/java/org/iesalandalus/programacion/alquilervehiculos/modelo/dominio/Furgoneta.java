@@ -26,8 +26,8 @@ public class Furgoneta extends Vehiculo {
 	}
 
 	private void setPma(int pma) {
-		if( pma < 0 | pma > 100) {
-			throw new IllegalArgumentException("ERROR: El pma no es válido. ");
+		if(pma <= 100 || pma > 10000) {
+			throw new IllegalArgumentException("ERROR: El PMA no es correcto.");
 		}
 		this.pma = pma;
 	}
@@ -37,8 +37,8 @@ public class Furgoneta extends Vehiculo {
 	}
 
 	private void setPlazas(int plazas) {
-		if (plazas < 1 | plazas > 9) {
-			throw new IllegalArgumentException("ERROR: El número de plazas no es válido.");
+		if (plazas <= 1 || plazas > 9) {
+			throw new IllegalArgumentException("ERROR: Las plazas no son correctas.");
 		}
 		this.plazas = plazas;
 
@@ -51,7 +51,7 @@ public class Furgoneta extends Vehiculo {
 	
 	@Override
 	public String toString() {
-		return String.format("%s %s %s %s - %s", getMarca(), getModelo(), pma, plazas, getMatricula());
+		return String.format("%s %s (%s kg, %s plazas) - %s", getMarca(), getModelo(), pma, plazas, getMatricula());
 	}
 
 }

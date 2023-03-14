@@ -13,13 +13,13 @@ import org.iesalandalus.programacion.alquilervehiculos.modelo.dominio.Vehiculo;
 import org.iesalandalus.programacion.alquilervehiculos.modelo.negocio.Alquileres;
 import org.iesalandalus.programacion.alquilervehiculos.modelo.negocio.Clientes;
 import org.iesalandalus.programacion.alquilervehiculos.modelo.negocio.IClientes;
-import org.iesalandalus.programacion.alquilervehiculos.modelo.negocio.Turismos;
+import org.iesalandalus.programacion.alquilervehiculos.modelo.negocio.Vehiculos;
 
 
 public class Modelo {
 	
 	IClientes clientes;
-	Turismos turismos;
+	Vehiculos turismos;
 	Alquileres alquileres;
 	
 	public Modelo() {
@@ -28,7 +28,7 @@ public class Modelo {
 
 	public void comenzar() {
 	    clientes = new Clientes();
-	    turismos = new Turismos();
+	    turismos = new Vehiculos();
 	    alquileres = new Alquileres();
 	}
 
