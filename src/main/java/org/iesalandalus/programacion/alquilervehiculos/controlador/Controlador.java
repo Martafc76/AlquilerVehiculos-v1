@@ -11,9 +11,9 @@ import org.iesalandalus.programacion.alquilervehiculos.modelo.dominio.Alquiler;
 import org.iesalandalus.programacion.alquilervehiculos.modelo.dominio.Cliente;
 import org.iesalandalus.programacion.alquilervehiculos.modelo.dominio.Turismo;
 import org.iesalandalus.programacion.alquilervehiculos.modelo.dominio.Vehiculo;
-import org.iesalandalus.programacion.alquilervehiculos.modelo.negocio.Alquileres;
 import org.iesalandalus.programacion.alquilervehiculos.modelo.negocio.Clientes;
-import org.iesalandalus.programacion.alquilervehiculos.modelo.negocio.Vehiculos;
+import org.iesalandalus.programacion.alquilervehiculos.modelo.negocio.memoria.Alquileres;
+import org.iesalandalus.programacion.alquilervehiculos.modelo.negocio.memoria.Vehiculos;
 import org.iesalandalus.programacion.alquilervehiculos.vista.Vista;
 
 public class Controlador {
@@ -91,23 +91,23 @@ public class Controlador {
 	
 	//
 	public List<Cliente> getClientes(){
-		return modelo.getClientes();
+		return modelo.getListaClientes();
 		}
 	
 	//
 	public List<Turismo> getTurismos(){
-		return modelo.getTurismos();
+		return modelo.getListaVehiculos();
 		}
 	
 	public List<Alquiler> getAlquileres(){
-		return modelo.getAlquileres();
+		return modelo.getListaAlquileres();
 		}
 		
 	public List<Alquiler> getAlquileres(Cliente cliente){
-		return modelo.getAlquileres(cliente);
+		return modelo.getListaAlquileres(cliente);
 	}
 	
 	public List<Alquiler> getAlquileres(Vehiculo turismo){
-		return modelo.getAlquileres(turismo);
+		return modelo.getListaAlquileres(turismo);
 	}
 }

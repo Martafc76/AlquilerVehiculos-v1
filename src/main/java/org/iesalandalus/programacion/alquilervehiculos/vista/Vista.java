@@ -6,8 +6,8 @@ import org.iesalandalus.programacion.alquilervehiculos.controlador.Controlador;
 import org.iesalandalus.programacion.alquilervehiculos.modelo.dominio.Alquiler;
 import org.iesalandalus.programacion.alquilervehiculos.modelo.dominio.Cliente;
 import org.iesalandalus.programacion.alquilervehiculos.modelo.dominio.Vehiculo;
-import org.iesalandalus.programacion.alquilervehiculos.modelo.negocio.Alquileres;
 import org.iesalandalus.programacion.alquilervehiculos.modelo.negocio.Clientes;
+import org.iesalandalus.programacion.alquilervehiculos.modelo.negocio.memoria.Alquileres;
 
 public class Vista {
 	Controlador controlador;

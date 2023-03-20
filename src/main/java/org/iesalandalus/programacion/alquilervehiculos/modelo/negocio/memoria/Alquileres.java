@@ -12,17 +12,19 @@ import org.iesalandalus.programacion.alquilervehiculos.modelo.dominio.Cliente;
 import org.iesalandalus.programacion.alquilervehiculos.modelo.dominio.Vehiculo;
 import org.iesalandalus.programacion.alquilervehiculos.modelo.negocio.IAlquileres;
 
-public class Alquileres implements IAlquileres {
+public class Alquileres implements IAlquileres{
 	private List<Alquiler> coleccionAlquileres;
 	
 	public Alquileres() {
 		coleccionAlquileres = new ArrayList<>();
 	}
 	
+	
 	@Override
 	public List<Alquiler> get() {
 		return new ArrayList<>(coleccionAlquileres);
 	}
+	
 	
 	@Override
 	public List<Alquiler> get(Cliente cliente){
@@ -35,6 +37,7 @@ public class Alquileres implements IAlquileres {
 		return alquileresCliente;
 	}
 	
+	
 	@Override
 	public List<Alquiler> get(Vehiculo vehiculo){
 		List<Alquiler>alquileresVehiculo = new ArrayList<>();
@@ -45,6 +48,7 @@ public class Alquileres implements IAlquileres {
 		}
 		return alquileresVehiculo;
 	}
+	
 	
 	@Override
 	public int getCantidad() {
@@ -73,6 +77,7 @@ public class Alquileres implements IAlquileres {
 		  }
 	}
 	
+	
 	@Override
 	public void insertar(Alquiler alquiler) throws OperationNotSupportedException {
 		if (alquiler == null) {
@@ -83,6 +88,7 @@ public class Alquileres implements IAlquileres {
 		
 	}
 
+	
 	@Override
 	public void devolver(Cliente cliente, LocalDate fechaDevolucion) throws OperationNotSupportedException{
 			if (cliente == null) {
@@ -96,6 +102,7 @@ public class Alquileres implements IAlquileres {
 			alquiler.devolver(fechaDevolucion);
 			
 	}
+	
 	
 	@Override
 	public void devolver(Vehiculo vehiculo, LocalDate fechaDevolucion) throws OperationNotSupportedException{
@@ -135,6 +142,7 @@ public class Alquileres implements IAlquileres {
 	}
 	
 
+	
 	@Override
 	public Alquiler buscar(Alquiler alquiler) {
 		if (alquiler == null) {
@@ -144,6 +152,7 @@ public class Alquileres implements IAlquileres {
 		return indice == -1 ? null : coleccionAlquileres.get(indice);
 	}
 
+	
 	@Override
 	public void borrar(Alquiler alquiler) throws OperationNotSupportedException {
 		if (alquiler == null) {
