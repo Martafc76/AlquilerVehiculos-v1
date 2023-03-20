@@ -79,7 +79,7 @@ public abstract class Modelo {
 
 	public abstract void insertar(Alquiler alquiler) throws OperationNotSupportedException;
 
-	public abstract void insertar(Turismo turismo) throws OperationNotSupportedException;
+	public abstract void insertar(Vehiculo vehiculo) throws OperationNotSupportedException;
 
 	public abstract void insertar(Cliente cliente) throws OperationNotSupportedException;
 

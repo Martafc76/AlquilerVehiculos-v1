@@ -24,8 +24,8 @@ public class ModeloCascada extends Modelo {
 	}
 
 	@Override
-	public void insertar(Turismo vehiculo) throws OperationNotSupportedException {
-		getVehiculos().insertar(new Turismo(vehiculo));
+	public void insertar(Vehiculo vehiculo) throws OperationNotSupportedException {
+		getVehiculos().insertar(vehiculo);
 	}
 
 	@Override
